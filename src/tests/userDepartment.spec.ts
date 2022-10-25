@@ -3,7 +3,7 @@ import getUserDepartment from "@/composables/getUserDepartment";
 import axios from "axios";
 
 jest.mock("axios");
-const mockedAxios = axios as jest.Mocked<typeof axios>;
+const mockedAxios = axios as jest.MockedFunction<typeof axios>;
 
 const mockData: UserDepartment = {
   PERSON_ID: "123456",
@@ -13,7 +13,15 @@ const mockData: UserDepartment = {
   ROLES: ""
 };
 
-mockedAxios.get.mockResolvedValue({ data: mockData });
+mockedAxios.mockResolvedValueOnce({ 
+    data: [ {
+            mockData
+        }],
+      status: 200,
+      statusText: 'Ok',
+      headers: {},
+      config: {},
+ });
 
 describe("getUserDepartment test", () => {
   afterEach(jest.clearAllMocks);
