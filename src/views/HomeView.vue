@@ -8,7 +8,7 @@
       </div>
       <div class="col-3 form-group"> 
         <label for="days">Location:</label> 
-        <input type="test" class="form-control" maxlength="3" v-model="data.request.location" autocomplete="off">
+        <input type="text" class="form-control" maxlength="12" v-model="data.request.location" autocomplete="off">
         <small class="form-text text-muted">Approval Required: {{isApprovalReqd}}</small>
       </div>
       <div class="col-3 form-group"> 
