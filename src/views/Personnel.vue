@@ -142,7 +142,7 @@ export default defineComponent({
     };
     const isEditable = computed(() => {
       //only compute if myUserDeptAndRole is available
-      if (myUserDeptAndRole.value) {
+      if (typeof myUserDeptAndRole !== 'undefined' && myUserDeptAndRole.value) {
         //you can only update your department's people
         if (personData.person.number !== "" && myUserDeptAndRole.value.DEPARTMENT_NAME !== personData.person.dept) return false; 
         if (personData.person.name.startsWith("DNU")) return false;

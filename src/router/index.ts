@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import DashBoard from '../views/DashBoard.vue'
+import NonPairedCosts from '../views/NonPairedCosts.vue'
+
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -20,7 +22,12 @@ const routes: Array<RouteRecordRaw> = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/Personnel.vue')
-  }
+  },
+  {
+    path: '/costs',
+    name: 'costs',
+    component: NonPairedCosts
+  },
 ]
 
 const router = createRouter({
