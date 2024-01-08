@@ -18,8 +18,8 @@ mockedAxios.get.mockResolvedValue({ data: mockData });
 describe("getUserDepartment test", () => {
   afterEach(jest.clearAllMocks);
 
-  xit("should return deptLookupErr empty if getUserDepartment found", async () => {
-    const {userDeptAndRole,  deptLookupErr, lookupDeptAndRoles } = getUserDepartment();
+  it("should return deptLookupErr empty if getUserDepartment found", async () => {
+    const { deptLookupErr, lookupDeptAndRoles } = getUserDepartment();
     lookupDeptAndRoles("abc@xyz.com");
 
     expect(deptLookupErr.value).toEqual("");
@@ -27,8 +27,8 @@ describe("getUserDepartment test", () => {
   });
 
   it("should return deptLookupErr Error Message if ROLES is empty", async () => {
-    const {userDeptAndRole,  deptLookupErr, lookupDeptAndRoles } = getUserDepartment();
-    lookupDeptAndRoles("abc@xyz.com");
+    const {deptLookupErr, lookupDeptAndRoles } = getUserDepartment();
+    await lookupDeptAndRoles("abc@xyz.com");
 
     expect(deptLookupErr.value).toEqual("Role not found for this user");
   });

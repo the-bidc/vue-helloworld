@@ -28,6 +28,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'costs',
     component: NonPairedCosts
   },
+  {
+    path: '/multiSelect',
+    name: 'multiSelect',
+    component: DashBoard
+  }
 ]
 
 const router = createRouter({
