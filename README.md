@@ -20,5 +20,9 @@ npm run build
 npm run test:unit
 ```
 
+### Run a unit test
+```
+npm run test:unit HelloComponent.spec.ts
+```
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
