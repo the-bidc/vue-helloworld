@@ -2,6 +2,8 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import DashBoard from '../views/DashBoard.vue'
 import NonPairedCosts from '../views/NonPairedCosts.vue'
+import HelloComponent from '../views/HelloComponent.vue'
+
 
 
 const routes: Array<RouteRecordRaw> = [
@@ -32,6 +34,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/multiSelect',
     name: 'multiSelect',
     component: DashBoard
+  },
+  {
+    path: '/helloComponent',
+    name: 'helloComponent',
+    component: HelloComponent
   }
 ]
 

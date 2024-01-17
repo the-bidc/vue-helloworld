@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import HelloComponent from '@/components/HelloComponent.vue'
+import HelloComponent from '@/views/HelloComponent.vue'
 
 describe('HelloComponent.vue Test', () => {
   it('renders newTaskButton when saveBtnActive is true', async () => {

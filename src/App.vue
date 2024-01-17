@@ -4,7 +4,8 @@
      <router-link to="/dashboard">DashBoard</router-link> |
      <router-link to="/personnel">Personnel</router-link> |
      <router-link to="/multiSelect">Multi-Select</router-link> |
-     <router-link to="/costs">Non-Paired Costs</router-link>
+     <router-link to="/costs">Non-Paired Costs</router-link> | 
+     <router-link to="/helloComponent">Hello Component</router-link>
   </nav>
   <router-view/>
 </template>
